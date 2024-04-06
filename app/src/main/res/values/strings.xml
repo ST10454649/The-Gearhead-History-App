@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">The Gearhead History App</string>
+    <string name="app">App</string>
+    <string name="gearhead_history">Gearhead History</string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
+    <string name="enter_age">Enter Age:</string>
+    <string name="compare">Compare</string>
+    <string name="clear">Clear</string>
+    <string name="proceed">Proceed</string>
 </resources>

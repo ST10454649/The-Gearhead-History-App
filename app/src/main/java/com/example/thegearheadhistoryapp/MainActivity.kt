@@ -3,31 +3,35 @@ package com.example.thegearheadhistoryapp
 import android.os.Parcel
 import android.os.Parcelable
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.Row
+import androidx.compose.runtime.Composable
 
-class MainActivity : AppCompatActivity(), Parcelable {
+class MainActivity() : AppCompatActivity(), Parcelable {
+    constructor(parcel: Parcel) : this() {
+    }
 
-                override fun describeContents(): Int {
-                    TODO("Not yet implemented")
-                }
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
 
-                override fun writeToParcel(dest: Parcel, flags: Int) {
-                    TODO("Not yet implemented")
-                }
+    }
 
-                companion object CREATOR : Parcelable.Creator<MainActivity> {
-                    override fun createFromParcel(parcel: Parcel): MainActivity {
-                        return MainActivity()
-                    }
+    override fun describeContents(): Int {
+        return 0
+    }
 
-                    override fun newArray(size: Int): Array<MainActivity?> {
-                        return arrayOfNulls(size)
-                    }
-                }
+    @Composable
+    fun CreateFromParcel(parcel: Parcel) {
+        return Row {
+            MainActivity(parcel = parcel)
+        }
+    }
 
+    companion object CREATOR : Parcelable.Creator<MainActivity> {
+        override fun createFromParcel(source: Parcel?): MainActivity {
+            TODO("Not yet implemented")
+        }
 
-            }
-
-
-
-
+        override fun newArray(size: Int): Array<MainActivity?> {
+            return arrayOfNulls(size)
+        }
+    }
 
