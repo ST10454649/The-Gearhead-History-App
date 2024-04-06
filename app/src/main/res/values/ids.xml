@@ -3,4 +3,5 @@
     <item name="clearButton" type="id">Button</item>
     <item name="compareButton" type="id" />
     <item name="ageEditText" type="id" />
+    <item name="TextView" type="id" />
 </resources>
